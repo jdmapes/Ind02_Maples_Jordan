@@ -13,6 +13,7 @@
 		2E36916127BF633C0068947A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E36915F27BF633C0068947A /* Main.storyboard */; };
 		2E36916327BF633D0068947A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E36916227BF633D0068947A /* Assets.xcassets */; };
 		2E36916627BF633D0068947A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E36916427BF633D0068947A /* LaunchScreen.storyboard */; };
+		2E36916E27BF68DB0068947A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E36916D27BF68DB0068947A /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2E36916227BF633D0068947A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E36916527BF633D0068947A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E36916727BF633D0068947A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E36916D27BF68DB0068947A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				2E36915B27BF633C0068947A /* SceneDelegate.swift */,
 				2E36915D27BF633C0068947A /* ViewController.swift */,
 				2E36915F27BF633C0068947A /* Main.storyboard */,
+				2E36916D27BF68DB0068947A /* SecondViewController.swift */,
 				2E36916227BF633D0068947A /* Assets.xcassets */,
 				2E36916427BF633D0068947A /* LaunchScreen.storyboard */,
 				2E36916727BF633D0068947A /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E36916E27BF68DB0068947A /* SecondViewController.swift in Sources */,
 				2E36915E27BF633C0068947A /* ViewController.swift in Sources */,
 				2E36915A27BF633C0068947A /* AppDelegate.swift in Sources */,
 				2E36915C27BF633C0068947A /* SceneDelegate.swift in Sources */,
