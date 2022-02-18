@@ -48,16 +48,35 @@
                     <view key="view" contentMode="scaleToFill" id="0yr-dx-7YB" customClass="SecondViewController" customModule="Ind02_Maples_Jordan" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mgZ-tC-oM0">
+                                <rect key="frame" x="65" y="216" width="284" height="360"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uT-Z1-yaW">
+                                <rect key="frame" x="76" y="756" width="264" height="83"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="button_hide-answer"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ulW-3X-c0l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mgZ-tC-oM0" firstAttribute="leading" secondItem="ulW-3X-c0l" secondAttribute="leading" constant="65" id="0Au-ND-H8W"/>
+                            <constraint firstItem="4uT-Z1-yaW" firstAttribute="top" secondItem="mgZ-tC-oM0" secondAttribute="bottom" constant="180" id="3dd-bu-pje"/>
+                            <constraint firstItem="mgZ-tC-oM0" firstAttribute="top" secondItem="ulW-3X-c0l" secondAttribute="top" constant="172" id="AYP-WX-aAp"/>
+                            <constraint firstItem="ulW-3X-c0l" firstAttribute="bottom" secondItem="4uT-Z1-yaW" secondAttribute="bottom" constant="23" id="Ehi-Vt-ZRV"/>
+                            <constraint firstItem="ulW-3X-c0l" firstAttribute="trailing" secondItem="mgZ-tC-oM0" secondAttribute="trailing" constant="65" id="FV2-yV-y3x"/>
+                            <constraint firstItem="4uT-Z1-yaW" firstAttribute="leading" secondItem="ulW-3X-c0l" secondAttribute="leading" constant="76" id="Lt5-jJ-dd3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOf-rJ-jtg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512" y="122"/>
+            <point key="canvasLocation" x="394" y="122"/>
         </scene>
     </scenes>
     <resources>
+        <image name="button_hide-answer" width="240" height="69"/>
         <image name="button_show-answer" width="238" height="67"/>
         <image name="button_shuffle" width="173" height="67"/>
         <systemColor name="systemBackgroundColor">
