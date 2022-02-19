@@ -18,12 +18,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setCellTag()
-        print(picCenters.count)  //FIXME!!! Remove before final submission
+        //print(picCenters.count)  //FIXME!!! Remove before final submission
+        print(picCenters)
+        //print(picCenters.values)
     }
     
     // Dictionary of [Position of Image : CenterPoint for that Image]
     var picCenters = [Int: CGPoint]()
-
+    
     
     // Set picCell Tag || Image 17 is blank
     func setCellTag() {
@@ -33,6 +35,11 @@ class ViewController: UIViewController {
             picCenters[picCell.tag] = picCell.center
         }
     }
+    
+        
+}
+    
+    
     
     
     // Create Objects of class type cells with a position and it's center
@@ -46,7 +53,4 @@ class ViewController: UIViewController {
 //        }
 //    }
     
-    
-    
-}
 
