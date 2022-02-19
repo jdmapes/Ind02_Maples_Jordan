@@ -18,7 +18,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
-
+    
+    // Create Objects of class type cells with a position and it's center
+    class Cells {
+        var origPos: Int
+        var x_y: CGPoint
+        
+        init(pos: Int, X_Y: CGPoint) {
+            self.origPos = pos
+            self.x_y = X_Y
+        }
+    }
 
 }
 
