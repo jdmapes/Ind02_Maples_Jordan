@@ -11,16 +11,25 @@ class ViewController: UIViewController {
 
     @IBOutlet var picCells: [UIImageView]!
     
+    
     @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        setCellTag()
     }
     
+    // Set picCell Tag
+    func setCellTag() {
+        for (index, picCell) in picCells.enumerated() {
+            picCell.tag = index + 1
+        }
+    }
+    
+    
     // Create Objects of class type cells with a position and it's center
-    class Cells {
+    class picCenter {
         var origPos: Int
         var x_y: CGPoint
         
@@ -29,6 +38,9 @@ class ViewController: UIViewController {
             self.x_y = X_Y
         }
     }
-
+    // Array of objects of class type picCenter
+    var picCenters = [picCenter]()
+    
+    
 }
 
