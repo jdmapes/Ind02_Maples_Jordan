@@ -20,10 +20,11 @@ class ViewController: UIViewController {
         setCellTag()
     }
     
-    // Set picCell Tag
+    // Set picCell Tag || Image 17 is blank
     func setCellTag() {
         for (index, picCell) in picCells.enumerated() {
             picCell.tag = index + 1
+            print(picCell.tag)
         }
     }
     
