@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var picCells: [UIImageView]!
     
     
+    
     @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
@@ -20,12 +21,13 @@ class ViewController: UIViewController {
         setCellTag()
         //print(picCenters.count)  //FIXME!!! Remove before final submission
         print(picCenters)
-        //print(picCenters.values)
+        print(picCells[4].center) // Prints IBOutlet elements center
+        print(picCenters[5]!) // Prints certain keys value
+        
     }
     
     // Dictionary of [Position of Image : CenterPoint for that Image]
     var picCenters = [Int: CGPoint]()
-    
     
     // Set picCell Tag || Image 17 is blank
     func setCellTag() {
@@ -35,6 +37,8 @@ class ViewController: UIViewController {
             picCenters[picCell.tag] = picCell.center
         }
     }
+    
+    
     
         
 }
