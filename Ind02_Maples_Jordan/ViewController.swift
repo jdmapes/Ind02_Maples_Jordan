@@ -20,11 +20,14 @@ class ViewController: UIViewController {
         setCellTag()
     }
     
+    // Array of objects of class type picCenter
+    var picCenters = [picCenter]()
+    
     // Set picCell Tag || Image 17 is blank
     func setCellTag() {
         for (index, picCell) in picCells.enumerated() {
             picCell.tag = index + 1
-            print(picCell.tag)
+            print(picCell.tag, " ", picCell.center)
         }
     }
     
@@ -39,8 +42,7 @@ class ViewController: UIViewController {
             self.x_y = X_Y
         }
     }
-    // Array of objects of class type picCenter
-    var picCenters = [picCenter]()
+    
     
     
 }
