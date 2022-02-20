@@ -11,8 +11,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var picCells: [UIImageView]!
     
-    
-    
     @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
@@ -20,25 +18,47 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setCellTag()
         //print(picCenters.count)  //FIXME!!! Remove before final submission
-        print(picCenters)
-        print(picCells[4].center) // Prints IBOutlet elements center
-        print(picCenters[5]!) // Prints certain keys value
-        
+        print(image_centers)
+        print(picCells[16].center) // Prints IBOutlet elements center
+        print(image_centers[18]!) // Prints certain keys value
     }
-    
+
     // Dictionary of [Position of Image : CenterPoint for that Image]
-    var picCenters = [Int: CGPoint]()
+    var image_centers = [Int: CGPoint]()
     
     // Set picCell Tag || Image 17 is blank
     func setCellTag() {
         for (index, picCell) in picCells.enumerated() {
             picCell.tag = index + 1
             print(picCell.tag, " ", picCell.center)
-            picCenters[picCell.tag] = picCell.center
+            image_centers[picCell.tag] = picCell.center
         }
     }
     
     
+    @IBAction func shuffleTapped(_ sender: UITapGestureRecognizer) {
+        
+        print("Shuffle Tapped")
+        
+        let result = swaptest()
+        
+        func swaptest() -> (CGPoint, CGPoint) {
+            // If statement checking position of next location
+            let temp = picCells[16].center
+            picCells[16].center = picCells[17].center
+            picCells[17].center = temp
+            return(picCells[16].center, picCells[17].center)
+        }
+        
+        picCells[17].center = result.1
+        picCells[16].center = result.0
+        
+        print(picCells[16].center, " ", picCells[17].center)
+    }
+    
+    
+   
+        
     
         
 }
