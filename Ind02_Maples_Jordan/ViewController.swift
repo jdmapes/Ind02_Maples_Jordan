@@ -62,13 +62,17 @@ class ViewController: UIViewController {
             
             let result = relativeDis(image: picCells[16])
             
-            var relDisofImg_x = result.0
-            var relDisofImg_y = result.1
+            var relDisOfImg_x = result.0
+            var relDisOfImg_y = result.1
             
             //**** Will need a case for diagonal****//
             
-            if (relDisofImg_x < reldis_xMax && relDisofImg_x > reldis_xMin) {
-                
+            if (relDisOfImg_x < reldis_xMin || relDisOfImg_x > reldis_xMax) {
+                break
+            } else if (relDisOfImg_y < reldis_yMin || relDisOfImg_y > reldis_yMin) {
+                break
+            } else {
+                //Swap Function
             }
             
             
@@ -84,14 +88,14 @@ class ViewController: UIViewController {
         
         // Relative difference is calculated by taking [(newVal + reference) - reference]/ reference
         // Relative difference between blank image and comparison image, if falls in range, swap
-        func relativeDis(image: UIImageView) -> (Float, Float) {
-            var blank_x = Float(image.center.x)     // blank will update
-            var blank_y = Float(image.center.y)     // blank will update
+        func relativeDis(image: UIImageView) -> (Double, Double) {
+            var blank_x = Double(image.center.x)     // blank will update
+            var blank_y = Double(image.center.y)     // blank will update
             
             var randomInt = Int.random(in: 0...19)
             
-            var _a = Float(picCells[randomInt].center.x)
-            var _b = Float(picCells[randomInt].center.y)
+            var _a = Double(picCells[randomInt].center.x)
+            var _b = Double(picCells[randomInt].center.y)
             
             var relDisofImage_x = (blank_x + _a) - blank_x / blank_x
             var relDisofImage_y = (blank_y + _a) - blank_y / blank_y
