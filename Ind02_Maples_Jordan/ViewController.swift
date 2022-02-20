@@ -43,8 +43,8 @@ class ViewController: UIViewController {
         
         var blank = picCells[16]
         
-        var count = 30
-        
+        var count = 50
+        var counter = 0
 //        randBool()
 //        print("blank location ", picCells[16].center, " ", "right image location", picCells[17].center, " ", "top image location", picCells[13].center)
 
@@ -63,12 +63,16 @@ class ViewController: UIViewController {
             
             if (((bCen_x - imgCen_x) > 71 || (bCen_x - imgCen_x) < -71) ||
                 ((bCen_y - imgCen_y) > 72 || (bCen_y - imgCen_y) < -72)) {
+                count += 1
+                counter += 1
                 print("Should fail")
             } else {
                 print("should succeed")
                 swap(randInt: randomInt)
+                counter += 1
             }
             print("While Loop Ran")
+            print("How many times it ran:", counter)
             count -= 1
         }
 
