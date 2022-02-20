@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         print(image_centers)
         print(picCells[16].center) // Prints IBOutlet elements center
         print(image_centers[18]!) // Prints certain keys value
+//      print(picCells[16].center.y) // Prints y coordinate of image
     }
 
     // Dictionary of [Position of Image : CenterPoint for that Image]
@@ -35,25 +36,37 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    // Shuffle Action Jackson
     @IBAction func shuffleTapped(_ sender: UITapGestureRecognizer) {
         
         print("Shuffle Tapped")
+        let blank = picCells[16].center
+        var count = 0
         
-        let result = swaptest()
-        
-        func swaptest() -> (CGPoint, CGPoint) {
-            // If statement checking position of next location
-            let temp = picCells[16].center
-            picCells[16].center = picCells[17].center
-            picCells[17].center = temp
-            return(picCells[16].center, picCells[17].center)
+        while (count > 0) {
+            //Swap Check
+            let reldis_xMin =      // Minimum relative distance between adjacent images.x coords
+            let reldis_xMax =       // Maximum relative distance between adjacent images.x coords
+            let reldis_yMin =       // Minimum relative distance between adjacent images.y coords
+            let reldis_yMax =       // Maximum relative distance between adjacent images.y coords
+            
+            // Relative difference is calculated by taking New +
+            count -= 1
         }
-        
-        picCells[17].center = result.1
-        picCells[16].center = result.0
-        
-        print(picCells[16].center, " ", picCells[17].center)
+//        let result = swaptest()
+//
+//        func swaptest() -> (CGPoint, CGPoint) {
+//            // If statement checking position of next location
+//            let temp = picCells[16].center
+//            picCells[16].center = picCells[17].center
+//            picCells[17].center = temp
+//            return(picCells[16].center, picCells[17].center)
+//        }
+//
+//        picCells[17].center = result.1
+//        picCells[16].center = result.0
+//
+//        print(picCells[16].center, " ", picCells[17].center)
     }
     
     
