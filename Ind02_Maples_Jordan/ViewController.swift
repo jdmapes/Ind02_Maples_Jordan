@@ -39,19 +39,64 @@ class ViewController: UIViewController {
     // Shuffle Action Jackson
     @IBAction func shuffleTapped(_ sender: UITapGestureRecognizer) {
         
-        print("Shuffle Tapped")
-        let blank = picCells[16].center
+        print("Shuffle Tapped")     //FIXME!!!!
+        
+        
+        
+        let reldis_xMin = 1.29     // Minimum relative distance between adjacent images.x coords
+        let reldis_xMax = 1.78     // Maximum relative distance between adjacent images.x coords
+        let reldis_yMin = 0.78     // Minimum relative distance between adjacent images.y coords
+        let reldis_yMax = 1.29     // Maximum relative distance between adjacent images.y coords
         var count = 0
         
+        let upOrRight = Bool.random()    // Starts the blank image swapping up or Right
+        
         while (count > 0) {
-            //Swap Check
-            let reldis_xMin =      // Minimum relative distance between adjacent images.x coords
-            let reldis_xMax =       // Maximum relative distance between adjacent images.x coords
-            let reldis_yMin =       // Minimum relative distance between adjacent images.y coords
-            let reldis_yMax =       // Maximum relative distance between adjacent images.y coords
+            //First Swap
+            if upOrRight {
+                //Swap 17
+            } else {
+                //Swap 13
+            }
             
-            // Relative difference is calculated by taking New +
+            
+            let result = relativeDis(image: picCells[16])
+            
+            var relDisofImg_x = result.0
+            var relDisofImg_y = result.1
+            
+            //**** Will need a case for diagonal****//
+            
+            if (relDisofImg_x < reldis_xMax && relDisofImg_x > reldis_xMin) {
+                
+            }
+            
+            
+            
+            
+              
+            
+            
+            
             count -= 1
+        }
+        
+        
+        // Relative difference is calculated by taking [(newVal + reference) - reference]/ reference
+        // Relative difference between blank image and comparison image, if falls in range, swap
+        func relativeDis(image: UIImageView) -> (Float, Float) {
+            var blank_x = Float(image.center.x)     // blank will update
+            var blank_y = Float(image.center.y)     // blank will update
+            
+            var randomInt = Int.random(in: 0...19)
+            
+            var _a = Float(picCells[randomInt].center.x)
+            var _b = Float(picCells[randomInt].center.y)
+            
+            var relDisofImage_x = (blank_x + _a) - blank_x / blank_x
+            var relDisofImage_y = (blank_y + _a) - blank_y / blank_y
+            
+            return (relDisofImage_x, relDisofImage_y)
         }
 //        let result = swaptest()
 //
