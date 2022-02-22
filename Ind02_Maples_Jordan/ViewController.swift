@@ -41,9 +41,9 @@ class ViewController: UIViewController {
         
         print("Shuffle Tapped")     //FIXME!!!!
         
-        var blank = picCells[16]
+        let blank = picCells[16]
         
-        var count = 50
+        var count = 25
         var counter = 0
 //        randBool()
 //        print("blank location ", picCells[16].center, " ", "right image location", picCells[17].center, " ", "top image location", picCells[13].center)
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
             let bCen_x = blank.center.x
             let bCen_y = blank.center.y
             
-            var randomInt = Int.random(in: 0...19)      // Random image number to check if adjacent
+            let randomInt = Int.random(in: 0...19)      // Random image number to check if adjacent
             
             print("random int", randomInt)
             print("blank center", blank.center, "random int center", picCells[randomInt].center)
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
             let imgCen_y = picCells[randomInt].center.y     // Takes y coord of the  random image's CGPoint
             
             if (((bCen_x - imgCen_x) > 71 || (bCen_x - imgCen_x) < -71) ||
-                ((bCen_y - imgCen_y) > 72 || (bCen_y - imgCen_y) < -72)) {
+                ((bCen_y - imgCen_y) > 72 || (bCen_y - imgCen_y) < -72)) || (blank.center == picCells[randomInt].center){
                 count += 1
                 counter += 1
                 print("Should fail")
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
 
         func swap(randInt: Int) {
             // If statement checking position of next location
-            UIView.animate(withDuration: 1, delay: 0, animations: {
+            UIView.animate(withDuration: 1, delay: 1, animations: {
             let temp = blank.center
                 blank.center = self.picCells[randInt].center
                 self.picCells[randInt].center = temp })
