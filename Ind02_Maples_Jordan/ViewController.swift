@@ -81,6 +81,103 @@ class ViewController: UIViewController {
         
     }
     
+  
+    @IBAction func tap01(_ sender: UITapGestureRecognizer) {
+        print("tapped 1")
+    }
+    
+    @IBAction func tap02(_ sender: UITapGestureRecognizer) {
+        print("tapped 2")
+    }
+    
+    @IBAction func tap03(_ sender: UITapGestureRecognizer) {
+        print("tapped 3")
+    }
+    
+    @IBAction func tap04(_ sender: UITapGestureRecognizer) {
+        print("tapped 4")
+    }
+    
+    @IBAction func tap05(_ sender: UITapGestureRecognizer) {
+        print("tapped 5")
+    }
+    
+    @IBAction func tap06(_ sender: UITapGestureRecognizer) {
+        print("tapped 6")
+    }
+    
+    @IBAction func tap07(_ sender: UITapGestureRecognizer) {
+        print("tapped 7")
+    }
+    
+    @IBAction func tap08(_ sender: UITapGestureRecognizer) {
+        print("tapped 8")
+    }
+    
+    @IBAction func tap09(_ sender: UITapGestureRecognizer) {
+        print("tapped 9")
+    }
+    
+    @IBAction func tap10(_ sender: UITapGestureRecognizer) {
+        print("tapped 10")
+    }
+    
+    @IBAction func tap11(_ sender: UITapGestureRecognizer) {
+        print("tapped 11")
+    }
+    
+    @IBAction func tap12(_ sender: UITapGestureRecognizer) {
+        print("tapped 12")
+    }
+    
+    @IBAction func tap13(_ sender: UITapGestureRecognizer) {
+        print("tapped 13")
+    }
+    
+    @IBAction func tap14(_ sender: UITapGestureRecognizer) {
+        print("tapped 14")
+    }
+    
+    @IBAction func tap15(_ sender: UITapGestureRecognizer) {
+        print("tapped 15")
+    }
+    
+    @IBAction func tap16(_ sender: UITapGestureRecognizer) {
+        print("tapped 16")
+    }
+    
+    
+    @IBAction func blankTap(_ sender: UITapGestureRecognizer) {
+        print("blanks location is: ", picCells[16].center)
+    }
+    
+    @IBAction func taptest(_ sender: UITapGestureRecognizer) {
+        print("tapped 18")
+    }
+    
+    @IBAction func tap19(_ sender: UITapGestureRecognizer) {
+        print("tapped 19")
+    }
+    
+    @IBAction func tap20(_ sender: UITapGestureRecognizer) {
+        print("tapped 20")
+    }
+    
+    //    func swap() {
+//        // If statement checking position of next location
+//        UIView.animate(withDuration: 1, delay: 1, animations: {
+//        let temp = blank.center
+//            blank.center = self.picCells[randInt].center
+//            self.picCells[randInt].center = temp })
+//        return()
+//    }
+    
+    
+    
+    
+       
+    
+    
     
 }
 
