@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
         var count = 25
 
-        while (count > 0) {
+        while count > 0 {
             
             let bCen_x = blank.center.x
             let bCen_y = blank.center.y
