@@ -184,10 +184,27 @@ class ViewController: UIViewController {
     
     func swap(image: UIImageView) {
         // If statement checking position of next location
-        UIView.animate(withDuration: 1, delay: 0.1, animations: {
-            let temp = self.picCells[16].center
-            self.picCells[16].center = image.center
-            image.center = temp })
+        let blank = picCells[16]
+        
+        let blank_x = blank.center.x
+        let blank_y = blank.center.y
+        
+        let image_x = image.center.x
+        let image_y = image.center.y
+        
+        if (((blank_x - image_x) > 71 || (blank_x - image_x) < -71) ||
+            ((blank_y - image_y) > 72 || (blank_y - image_y) < -72)) || (blank.center == image.center){
+            
+            
+            print("Swap Should fail")
+        } else {
+            print("Swap Should succeed")
+            UIView.animate(withDuration: 1, delay: 0.1, animations: {
+                let temp = self.picCells[16].center
+                self.picCells[16].center = image.center
+                image.center = temp })
+        }
+        
         return()
     }
     
