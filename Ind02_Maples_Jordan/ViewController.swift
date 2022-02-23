@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Ind02_Maples_Jordan
 //
-//  Created by Jordan Maples on 2/17/22.
+//  Created by Jordan Maples on 2/10/22.
 //
 
 import UIKit
@@ -15,22 +15,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setCellTag()
-        //print(image_centers)
-        //print(picCells[16].center) // Prints IBOutlet elements center
-        //print("This should be 171.5, 329", image_centers[6]!) // Prints certain keys value
-        //copyOrigCellLoc()
-        //print(origCellLoc[0].center)
-        print(picCells[0].center)
+        
     }
 
     // Dictionary of [Position of Image : CenterPoint for that Image]
     var image_centers = [Int: CGPoint]()
     
-//    var origCellLoc = [UIImageView]()   // Answer array to check for win
-    
-    // Set picCell Tag || Image 17 is blank
+    // Set picCell Tag
     func setCellTag() {
         for (index, picCell) in picCells.enumerated() {
             picCell.tag = index + 1
@@ -39,12 +31,6 @@ class ViewController: UIViewController {
         }
     }
 
-//    func copyOrigCellLoc() {
-//        for i in 0...picCells.count - 1 {
-//            origCellLoc.append(picCells[i])
-//        }
-//    }
-    
     // Shuffle Action Jackson
     @IBAction func shuffleTapped(_ sender: UITapGestureRecognizer) {
         
@@ -75,9 +61,8 @@ class ViewController: UIViewController {
         // Swap shuffle with adjacent images in solveable manner
         func swap(randInt: Int) {
             
-            // If statement checking position of next location
             UIView.animate(withDuration: 1, delay: 1, animations: {
-            let temp = blank.center
+                let temp = blank.center
                 blank.center = self.picCells[randInt].center
                 self.picCells[randInt].center = temp })
             return()
@@ -88,97 +73,81 @@ class ViewController: UIViewController {
     // MARK: Tap Gesture Recognizers
     
     @IBAction func tap01(_ sender: UITapGestureRecognizer) {
-        print("tapped 1")
         swap(image: picCells[0])
         checkWin ()
     }
     
     @IBAction func tap02(_ sender: UITapGestureRecognizer) {
-        print("tapped 2")
         swap(image: picCells[1])
         checkWin ()
     }
     
     @IBAction func tap03(_ sender: UITapGestureRecognizer) {
-        print("tapped 3")
         swap(image: picCells[2])
         checkWin ()
     }
     
     @IBAction func tap04(_ sender: UITapGestureRecognizer) {
-        print("tapped 4")
         swap(image: picCells[3])
         checkWin ()
     }
     
     @IBAction func tap05(_ sender: UITapGestureRecognizer) {
-        print("tapped 5")
         swap(image: picCells[4])
         checkWin ()
     }
     
     @IBAction func tap06(_ sender: UITapGestureRecognizer) {
-        print("tapped 6")
         swap(image: picCells[5])
         checkWin ()
     }
     
     @IBAction func tap07(_ sender: UITapGestureRecognizer) {
-        print("tapped 7")
         swap(image: picCells[6])
         checkWin ()
     }
     
     @IBAction func tap08(_ sender: UITapGestureRecognizer) {
-        print("tapped 8")
         swap(image: picCells[7])
         checkWin ()
     }
     
     @IBAction func tap09(_ sender: UITapGestureRecognizer) {
-        print("tapped 9")
         swap(image: picCells[8])
         checkWin ()
     }
     
     @IBAction func tap10(_ sender: UITapGestureRecognizer) {
-        print("tapped 10")
         swap(image: picCells[9])
         checkWin ()
     }
     
     @IBAction func tap11(_ sender: UITapGestureRecognizer) {
-        print("tapped 11")
         swap(image: picCells[10])
         checkWin ()
     }
     
     @IBAction func tap12(_ sender: UITapGestureRecognizer) {
-        print("tapped 12")
         swap(image: picCells[11])
         checkWin ()
     }
     
     @IBAction func tap13(_ sender: UITapGestureRecognizer) {
-        print("tapped 13")
         swap(image: picCells[12])
         checkWin ()
     }
     
     @IBAction func tap14(_ sender: UITapGestureRecognizer) {
-        print("tapped 14")
         swap(image: picCells[13])
         checkWin ()
     }
     
     @IBAction func tap15(_ sender: UITapGestureRecognizer) {
-        print("tapped 15")
         swap(image: picCells[14])
         checkWin ()
     }
     
     @IBAction func tap16(_ sender: UITapGestureRecognizer) {
-        print("tapped 16")
         swap(image: picCells[15])
         checkWin ()
     }
@@ -188,19 +157,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func taptest(_ sender: UITapGestureRecognizer) {
-        print("tapped 18")
         swap(image: picCells[17])
         checkWin ()
     }
     
     @IBAction func tap19(_ sender: UITapGestureRecognizer) {
-        print("tapped 19")
         swap(image: picCells[18])
         checkWin ()
     }
     
     @IBAction func tap20(_ sender: UITapGestureRecognizer) {
-        print("tapped 20")
         swap(image: picCells[19])
         checkWin ()
     }
@@ -220,9 +186,7 @@ class ViewController: UIViewController {
         // If statement checking position of next location
         if (((blank_x - image_x) > 71 || (blank_x - image_x) < -71) ||
             ((blank_y - image_y) > 72 || (blank_y - image_y) < -72)) || (blank.center == image.center){
-            print("Swap Should fail")
         } else {
-            print("Swap Should succeed")
             
             UIView.animate(withDuration: 0.25, delay: 0.1, animations: {
                 let temp = self.picCells[16].center
@@ -252,20 +216,12 @@ class ViewController: UIViewController {
             } else if picCells[i].center != image_centers[i + 1] {
                 break
             } else {
-                print("Pic Cells \(i) is:", picCells[i].center, " ", "image_center is ", image_centers[i + 1]!)
-                print("win triger")
                 winAlert()
             }
             
         }
             
     }
-    
-    
-       
-    
-    
-    
 }
 
 
