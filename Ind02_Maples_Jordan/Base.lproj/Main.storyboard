@@ -348,7 +348,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-471" y="252"/>
+            <point key="canvasLocation" x="-783" y="500"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="efx-mu-2y4">
@@ -386,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOf-rJ-jtg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="481" y="252"/>
+            <point key="canvasLocation" x="-4" y="500"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
