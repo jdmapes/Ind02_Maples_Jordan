@@ -84,66 +84,82 @@ class ViewController: UIViewController {
   
     @IBAction func tap01(_ sender: UITapGestureRecognizer) {
         print("tapped 1")
+        swap(image: picCells[0])
     }
     
     @IBAction func tap02(_ sender: UITapGestureRecognizer) {
         print("tapped 2")
+        swap(image: picCells[1])
     }
     
     @IBAction func tap03(_ sender: UITapGestureRecognizer) {
         print("tapped 3")
+        swap(image: picCells[2])
     }
     
     @IBAction func tap04(_ sender: UITapGestureRecognizer) {
         print("tapped 4")
+        swap(image: picCells[3])
     }
     
     @IBAction func tap05(_ sender: UITapGestureRecognizer) {
         print("tapped 5")
+        swap(image: picCells[4])
     }
     
     @IBAction func tap06(_ sender: UITapGestureRecognizer) {
         print("tapped 6")
+        swap(image: picCells[5])
     }
     
     @IBAction func tap07(_ sender: UITapGestureRecognizer) {
         print("tapped 7")
+        swap(image: picCells[6])
     }
     
     @IBAction func tap08(_ sender: UITapGestureRecognizer) {
         print("tapped 8")
+        swap(image: picCells[7])
     }
     
     @IBAction func tap09(_ sender: UITapGestureRecognizer) {
         print("tapped 9")
+        swap(image: picCells[8])
     }
     
     @IBAction func tap10(_ sender: UITapGestureRecognizer) {
         print("tapped 10")
+        swap(image: picCells[9])
     }
     
     @IBAction func tap11(_ sender: UITapGestureRecognizer) {
         print("tapped 11")
+        swap(image: picCells[10])
     }
     
     @IBAction func tap12(_ sender: UITapGestureRecognizer) {
         print("tapped 12")
+        swap(image: picCells[11])
     }
     
     @IBAction func tap13(_ sender: UITapGestureRecognizer) {
         print("tapped 13")
+        swap(image: picCells[12])
     }
     
     @IBAction func tap14(_ sender: UITapGestureRecognizer) {
         print("tapped 14")
+        swap(image: picCells[13])
     }
     
     @IBAction func tap15(_ sender: UITapGestureRecognizer) {
         print("tapped 15")
+        swap(image: picCells[14])
     }
     
     @IBAction func tap16(_ sender: UITapGestureRecognizer) {
         print("tapped 16")
+        swap(image: picCells[15])
     }
     
     
@@ -153,24 +169,27 @@ class ViewController: UIViewController {
     
     @IBAction func taptest(_ sender: UITapGestureRecognizer) {
         print("tapped 18")
+        swap(image: picCells[17])
     }
     
     @IBAction func tap19(_ sender: UITapGestureRecognizer) {
         print("tapped 19")
+        swap(image: picCells[18])
     }
     
     @IBAction func tap20(_ sender: UITapGestureRecognizer) {
         print("tapped 20")
+        swap(image: picCells[19])
     }
     
-    //    func swap() {
-//        // If statement checking position of next location
-//        UIView.animate(withDuration: 1, delay: 1, animations: {
-//        let temp = blank.center
-//            blank.center = self.picCells[randInt].center
-//            self.picCells[randInt].center = temp })
-//        return()
-//    }
+    func swap(image: UIImageView) {
+        // If statement checking position of next location
+        UIView.animate(withDuration: 1, delay: 0.1, animations: {
+            let temp = self.picCells[16].center
+            self.picCells[16].center = image.center
+            image.center = temp })
+        return()
+    }
     
     
     
